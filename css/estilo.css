@@ -1,165 +1,96 @@
-
-body{
-    background-color: brown;
+/* CSS padrão (desktop/tablet) */
+body {
+  background-color: brown;
 }
 
-
-h1{
-     background-color: rgb(228, 48, 48);
-     margin-left: 50px;
+h1 {
+  background-color: rgb(228, 48, 48);
+  margin-left: 50px;
   display: inline;
   padding: 40px;
   border-radius: 40px;
   font-family: cursive;
   box-shadow:
-    4px 4px 0 rgba(200, 30, 30, 0.8),   /* sombra inferior direita (profundidade) */
-    -2px -2px 0 rgba(245, 147, 147, 0.9); /* luz no topo esquerdo (realce) */
-    
-
-
-}
-.tomateimg{
-    display: block;
-    width: 150px;
-    margin: 0 auto;
-    box-shadow: 0 20px 20px rgba(88, 24, 24, 0.8);
-    border-radius: 50%;
-   
-    
-
-
-}
-.botao{
-    margin-top: 100px;
-    font-size: 30px;
-    padding: 20px;
-    border: 1px solid rgb(228, 48, 48);
-    border-radius: 40px;
-    font-family: cursive;
-    background-color: rgb(228, 48, 48);
-    box-shadow:
-    4px 4px 0 rgba(200, 30, 30, 0.8),   /* sombra inferior direita (profundidade) */
+    4px 4px 0 rgba(200, 30, 30, 0.8),
     -2px -2px 0 rgba(245, 147, 147, 0.9);
-    font-weight: normal;
-    transition: all 0.2 ease;
-    margin-left: 20px;
-
-
 }
+
+.tomateimg {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  box-shadow: 0 20px 20px rgba(88, 24, 24, 0.8);
+  border-radius: 50%;
+}
+
+.botao {
+  margin-top: 100px;
+  font-size: 30px;
+  padding: 20px;
+  border: 1px solid rgb(228, 48, 48);
+  border-radius: 40px;
+  font-family: cursive;
+  background-color: rgb(228, 48, 48);
+  box-shadow:
+    4px 4px 0 rgba(200, 30, 30, 0.8),
+    -2px -2px 0 rgba(245, 147, 147, 0.9);
+  font-weight: normal;
+  transition: all 0.2s ease;
+  margin-left: 20px;
+}
+
 .botao:active {
-
-    box-shadow:
-    4px 4px 0 rgba(200, 30, 30, 0.8);
-    transform: translate(0px, 4px);
-
+  box-shadow: 4px 4px 0 rgba(200, 30, 30, 0.8);
+  transform: translate(0px, 4px);
 }
-.botao:hover{
 
-color: white;
-
+.botao:hover {
+  color: white;
 }
-.tomate{
-    width: fit-content;
-    margin: 0 auto;
-    position: relative;
-    margin-top: 120px;
 
-
+.tomate {
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 120px;
 }
-.explosao{
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: auto;
-    width: 200px;
-    z-index: 2;
-    transform: translate(-50%, -50%);
-    display: none;
+.explosao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: 200px;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  display: none;
 }
+
+/* Mudanças para telas pequenas (ex: celular) */
 @media (max-width: 600px) {
-
-body{
-    background-color: brown;
-}
-
-
-h1{
-     background-color: rgb(228, 48, 48);
-     margin-left: 50px;
-  display: inline;
-  padding: 40px;
-  border-radius: 40px;
-  font-family: cursive;
-  box-shadow:
-    4px 4px 0 rgba(200, 30, 30, 0.8),   /* sombra inferior direita (profundidade) */
-    -2px -2px 0 rgba(245, 147, 147, 0.9); /* luz no topo esquerdo (realce) */
-    
-
-
-}
-.tomateimg{
-    display: block;
-    width: 150px;
-    margin: 0 auto;
-    box-shadow: 0 20px 20px rgba(88, 24, 24, 0.8);
-    border-radius: 50%;
-   
-    
-
-
-}
-.botao{
-    margin-top: 100px;
-    font-size: 30px;
+  h1 {
+    font-size: 6vw;
     padding: 20px;
-    border: 1px solid rgb(228, 48, 48);
-    border-radius: 40px;
-    font-family: cursive;
-    background-color: rgb(228, 48, 48);
-    box-shadow:
-    4px 4px 0 rgba(200, 30, 30, 0.8),   /* sombra inferior direita (profundidade) */
-    -2px -2px 0 rgba(245, 147, 147, 0.9);
-    font-weight: normal;
-    transition: all 0.2 ease;
-    margin-left: 20px;
+    margin-left: 10px;
+  }
 
+  .botao {
+    font-size: 6vw;
+    margin-left: 0;
+    width: 90%;
+    display: block;
+    margin: 30px auto 0;
+  }
 
+  .tomateimg {
+    width: 40vw;
+  }
+
+  .explosao {
+    width: 120px;
+  }
+
+  .tomate {
+    margin-top: 60px;
+  }
 }
-.botao:active {
-
-    box-shadow:
-    4px 4px 0 rgba(200, 30, 30, 0.8);
-    transform: translate(0px, 4px);
-
-}
-.botao:hover{
-
-color: white;
-
-}
-.tomate{
-    width: fit-content;
-    margin: 0 auto;
-    position: relative;
-    margin-top: 120px;
-
-
-}
-.explosao{
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: auto;
-    width: 200px;
-    z-index: 2;
-    transform: translate(-50%, -50%);
-    display: none;
-}
-
-
-
-
-
-
