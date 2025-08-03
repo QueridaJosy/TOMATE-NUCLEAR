@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Css</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 90px; margin-right: 40px;">   
+        <h1>TOMATE NUCLEAR.COM</h1>
+
+    </div>
+    <div class="tomate">
+        <img class="tomateimg" src="tomato-with-ai-generated-free-png.webp" alt="">
+        <img class="explosao"   src="explosion-boom.gif">
+
+    </div>
+   <div style="text-align: center;"> 
+    <button class="botao">EXPLOSÃO RADIOATIVA</button>
+   </div> 
+
+   <audio id="som-explosao" src="deltarune-explosion.mp3"></audio>
+
+   <script>
+    const botao = document.querySelector('.botao')
+    const explosao = document.querySelector('.explosao');
+    const som = document.getElementById('som-explosao');
+
+    let animando = false;
+
+    botao.addEventListener('click', () => {
+        if(animando) return;
+        animando = true
+        explosao.style.display = 'block';  // mostra explosão
+        som.currentTime = 0;                // reseta o áudio
+        som.play();                        // toca som
+
+    // depois de 2 segundos, esconde a explosão
+        setTimeout(() => {
+         explosao.style.display = 'none';
+         animando=false;
+        }, 1400);
+      });
+
+
+
+
+     </script>
+</body>
+</html>
